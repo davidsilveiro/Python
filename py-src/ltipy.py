@@ -1,7 +1,6 @@
 import re
 import os
 import sys
-import subprocess
 import signal
 import threading
 import time
