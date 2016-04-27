@@ -1,3 +1,4 @@
+from subprocess import Popen, PIPE, STDOUT
 import re
 import os
 import sys
@@ -218,7 +219,7 @@ def startIPy(opts):
       cmd = 'bin/ipython'
     else:
       cmd = 'ipython'
-    ipy = subprocess.Popen([cmd, 'kernel', '--pylab=inline'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=os.environ)
+    ipy = Popen([cmd, 'kernel', '--pylab=inline'], stdout=PIPE, stderr=STDOUT, env=os.environ)
     #Start a thread listening to stdout
     t = threading.Thread(target=listenIPy)
     t.start()
