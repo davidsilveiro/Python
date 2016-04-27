@@ -10,7 +10,6 @@ import json
 import re
 import traceback
 import ltipy
-import time
 import asyncore
 import signal
 import lttools
